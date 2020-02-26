@@ -9,49 +9,62 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Bootstrap Grid and Navigation</title>
+
+    <style>
+      .navbar-brand img {
+        max-width: 75px;
+      }
+    </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-info">
+      <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_TV_2015.svg/1200px-Logo_TV_2015.svg.png" alt="Our amazing brand logotype" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                 
-                   
-                  </ul>
-                  
-                </div>
-              </nav>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
 
-      <!--simple grid structure-->
-      <div class="container">
-          <div class="row">
-              <div class="col-12 col-md-6 col-lg-4 order-lg-2 bg-primary">
-                  Column 1 of 4
-              </div>
-              <div class="col col-12 col-md-6 col-lg-4  order-lg-1 bg-warning">
-                    Column 2 of 4
-          </div>
-          <div class="col col-12 col-md-6 col-lg-4 order-lg-3 bg-secondary">
-                Column 3 of 4
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        
       </div>
-      <div class="col col-12 col-md-6 col-lg-12 order-lg-4 bg-info">
-            Column 1 of 4
-        </div>
-    </div>
-</div>
+    </nav>
 
+    <!-- simple grid structure -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 order-lg-2 bg-primary">
+          Column 1 of 4
+        </div>
+        <div class="col col-md-6 col-lg-4 order-lg-1 bg-warning">
+          Column 2 of 4
+        </div>
+        <div class="col col-md-6 col-lg-4 order-lg-3 bg-secondary">
+          Column 3 of 4
+        </div>
+        <div class="col col-md-6 col-lg-12 order-lg-4 bg-info">
+          Column 4 of 4
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
