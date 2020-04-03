@@ -2,7 +2,7 @@ $(document).ready(function(){
     //we write everything here
 
     $('#myCarousel').carousel({
-        interval: 330
+        interval: 2030
     });
 
     $('#carouselControl').click(function(){
