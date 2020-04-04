@@ -14,7 +14,7 @@
 
     <hr class="featurette-divider">
 
-    <title>Welcome</title>
+    <title>Home</title>
     <style>
       .jumbotron {
         background-size: cover;
@@ -32,7 +32,7 @@
     <div class="jumbotron jumbotron-fluid" img src="tar2.jpeg" alt="">
       
       <div class="container">
-        <h1 class="display-4 text-light">Welcome</h1>
+        <h1 class="display-4 text-light">Home</h1>
         
         
       
@@ -40,7 +40,7 @@
       </div>
     </div>
   
-    <title>Welcome</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -129,7 +129,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -181,18 +181,31 @@
           <h3>Subscribe To Get The Notification Of Latest <span>Posts</span></h3>
         
           
+          <form action="/action_page.php" class="was-validated">
+
+            <form class="needs-validation" novalidate>
 
             <div class="form-group">
-                <label for="uname"></label>
-                <input type="text" class="form-control" id="uname" placeholder=" Add E-mail" name="uname" required>
+                <label for="E-mail"></label>
+                <input type="text" class="form-control" id="E-mail" placeholder=" Add E-mail" name="" required>
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
                 
 
               </div>
 
+
+             
+
               <!-- Button trigger modal -->
+
+              <body>
+                  <input id="accept" name="accept" type="checkbox" value="y"/>I accept<br>
+                  
+                </body>
+
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" value='Subscribe'>
+
 
     Subscribe
   </button>
