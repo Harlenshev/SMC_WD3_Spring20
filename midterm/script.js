@@ -5,6 +5,8 @@ $(document).ready(function(){
         interval: 2030
     });
 
+   
+
     $('#carouselControl').click(function(){
         
         if( $('#carouselControl').hasClass('paused') ){
