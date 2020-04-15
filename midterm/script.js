@@ -1,8 +1,8 @@
 $(document).ready(function(){
     //we write everything here
-
+    $("#myModal").modal('show');
     $('#myCarousel').carousel({
-        interval: 2030
+        interval: 2000
     });
 
    
@@ -27,4 +27,10 @@ $(document).ready(function(){
             backdrop: false
         });
     });
+
+  
+    
+    
+    
+
 });
