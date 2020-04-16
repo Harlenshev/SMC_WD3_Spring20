@@ -65,14 +65,14 @@
           margin: 0;
           font-weight: bold;
         }
-        .modal-newsletter .close {
+       /* .modal-newsletter .close {
           position: absolute;
           top: -15px;
           right: -15px;
           text-shadow: none;
           opacity: 0.3;
           font-size: 24px;
-        }
+        } */
         .modal-newsletter .close:hover {
           opacity: 0.8;
         }
@@ -145,6 +145,17 @@
 }
       </style>
  
+<script>
+function validateEmail(input){
+      
+      if (input.validity.typeMismatch || input.value=="") {
+        document.getElementById ("submitButton") .disabled = true;
+      } else {
+        document.getElementById ("submitButton") .disabled = false;
+      }
+  }
+</script>
+
         </head>
         
   <body>
@@ -248,10 +259,45 @@
         <div class="jumbotron jumbotron-fluid" img src="tar222.png" alt="">
             <h2 class="display-4 text-dark">#1 Tarantula Care</h2>
             </div>
-  <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger row justify-content-center" role="alert">
       Call 310-555-5555 now for 50% off training and sitting!
     </div>
 
+    <div class="card-group">
+        <div class="card">
+          <img src="leash1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Walks</h5>
+            <p class="card-text">We can come to your house and take your Tarantula for walks. Leashes can be provided. The walks consits strength tranning and relaxing jogging.</p>
+          </div>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+        <div class="card">
+          <img src="tarantulahand.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Runaway Patrol</h5>
+            <p class="card-text">If your Tarantula escapes we can help! We have rescued one that escaped in a college classroom. Call us so we can help!</p>
+          </div>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+        <div class="card">
+          <img src="caget.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tarantula Sitting</h5>
+            <p class="card-text">We can watch your Tarantula while your on vacation. Our Facility has comfortable cages and climate controled areas.</p>
+          </div>
+          <div class="card-footer">
+            
+          </div>
+        </div>
+      
+      </div>
+
+    
   
     
   <!-- Optional JavaScript -->
@@ -297,18 +343,24 @@
           <div class="modal-content">
             <form action="/examples/actions/confirmation.php" method="post" class="was-validated">
               
-              <div class="row justify-content-center text-dark">
-                <h5>Subscribe to our newsletter</h5>	
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
-              </div>
+              <div class="modal-header">
+                <div class="row text-dark">
+                      <h5 align="center">Subscribe to our newsletter</h5>	
+                    </div> 
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span style="padding: 5px">&times;</span></button>
+                  </div> 
+              
+
+              
               <div class="modal-body text-dark">					
                 <p>Signup for the latest Tarantula news, updates and amazing offers delivered directly in your inbox.</p>
                 <div class="input-group">
                     <div class="row justify-content-center">
-                  <input type="email" class="form-control" placeholder="Email" name="email" required="true">
+                  <input type="email" class="form-control" placeholder="Email" name="email" required="true" onkeyup="validateEmail(this)" onmouseout="validateEmail(this)">
                   <div class="valid-feedback"></div>
                 <div class="invalid-feedback"></div>
-                 <input type="submit" style="display: flex; justify-content: center" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" Close value="Subscribe"> 
+                 <input type="submit"  id="submitButton" style="display: flex; justify-content: center" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" Close value="Subscribe" disabled> 
               
                 
                 
