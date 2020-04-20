@@ -22,6 +22,20 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
       <style>
+        @import "base.css";
+        .display-4 {
+          white-space: nowrap;
+        }
+ #myCarousel{
+   border-style: solid;
+   border-width: thin;
+    border-color: rgb(247, 6, 6);
+  }
+
+  #carouselControl {
+    margin: 5px 7px;
+  }
+
             .jumbotron {
               background-size: cover;
               background-position: center;
@@ -143,6 +157,13 @@
     margin-top: 100px;
   }
 }
+@media only screen and (max-width: 609px) {
+  #jumbo1{
+    font-size: 150%;
+    color: aquamarine;
+  }
+  
+}
       </style>
  
 <script>
@@ -164,9 +185,9 @@ function validateEmail(input){
         
   <header>
     
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-dark" id="navbarcustom">
       
-          <a class="navbar-brand" href="#">Tarantula Systems</a>
+          <a class="navbar-brand" href="#" id="navbarheader">Tarantula Systems</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -256,8 +277,8 @@ function validateEmail(input){
 
 
 
-        <div class="jumbotron jumbotron-fluid" img src="tar222.png" alt="">
-            <h2 class="display-4 text-dark">#1 Tarantula Care</h2>
+        <div class="jumbotron jumbotron-fluid" img src="tar222.png" alt="" >
+            <h2 class="display-4 text-dark" id="jumbo1" >#1 Tarantula Care</h2>
             </div>
   <div class="alert alert-danger row justify-content-center" role="alert">
       Call 310-555-5555 now for 50% off care!
@@ -279,7 +300,7 @@ function validateEmail(input){
           <img src="trophy1.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Award Winning</h5>
-            <p class="card-text">We won the prestigious award, Best Care by The Tarantula Times. We were featured in the 2016 Fall issue!</p>
+            <p class="card-text">We won the prestigious award, Best Care by The Tarantula Times. We were in the 2016 Fall issue!</p>
           </div>
           <div class="card-footer">
             

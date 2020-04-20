@@ -1,0 +1,17 @@
+*{
+    font-family: "Courier New", Courier, monospace;
+
+}
+
+body {
+    background-color: rgb(223, 226, 208);
+  }
+ 
+  #navbarcustom {
+    background-image: url("tar222.png"); 
+    background-repeat: repeat-x;
+  }
+  #navbarheader {
+    color: #000;
+   
+  }
