@@ -1,0 +1,17 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-color: rgb(216, 215, 210);
+  }
+ 
+  #navbarcustom {
+    background-image: url("tar222.png"); 
+    background-repeat: repeat-x;
+  }
+  #navbarheader {
+    color: #000;
+   
+  }
