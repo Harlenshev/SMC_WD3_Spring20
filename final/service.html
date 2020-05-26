@@ -44,7 +44,11 @@
 </head>
 
 <script>
-localStorage.setItem("itemCount", 0);
+if(!localStorage.getItem("cartSize")) {
+  localStorage.setItem("cartSize", 0);
+}
+
+
 function buyItem(itemNum, productName) {
   /* 
   1- S2000 $10.00
@@ -60,17 +64,17 @@ function buyItem(itemNum, productName) {
   9- Mustang $10.00
   */
  $("#checkoutModal") .modal("show");
- var itemName = "prod" + itemNum;
+ var itemName = "product" + itemNum;
  if (localStorage.getItem(itemName)){
 //added   
-var currentItemSize = Number(localStorage.getItem("ItemCount"));
-alert(currentItemSize);
+var currentItemSize = Number(localStorage.getItem("cartSize"));
+alert("This Item Has Been Already Added");
  } else
  {
   localStorage.setItem(itemName, productName);
-  var currentItemSize = Number(localStorage.getItem("ItemCount"));
+  var currentItemSize = Number(localStorage.getItem("cartSize"));
   currentItemSize++;
-  localStorage.setItem("itemCount", currentItemSize);
+  localStorage.setItem("cartSize", currentItemSize);
  }
 }
   </script>
@@ -93,7 +97,7 @@ alert(currentItemSize);
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Thank you for Subscribing</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Thank You</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -103,7 +107,7 @@ alert(currentItemSize);
               
 
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Return Shopping</button>
-           <a href="#" class="btn btn-primary">Go To Checkout</a>
+           <a href="checkout.html" class="btn btn-primary">Go To Checkout</a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -143,7 +147,7 @@ alert(currentItemSize);
         <div class="card-body">
           <h5 class="card-title">Tarantula Sitting</h5>
           <p class="card-text">We can watch your Tarantula while your on vacation. Our Facility has comfortable cages and climate controled areas.</p>
-          <button type="button" onclick="buyItem(3)" class="btn btn-primary">Buy</button>
+          <button type="button" onclick="buyItem(3, 'FRS')" class="btn btn-primary">Buy</button>
         </div>
         <div class="card-footer">
           
@@ -157,7 +161,7 @@ alert(currentItemSize);
             <div class="card-body">
               <h5 class="card-title">Walks</h5>
               <p class="card-text">We can come to your house and take your Tarantula for walks. Leashes can be provided. The walks consits strength tranning and relaxing jogging.</p>
-              <button type="button" onclick="buyItem(4)" class="btn btn-primary">Buy</button>
+              <button type="button" onclick="buyItem(4, 'Lexus IS')" class="btn btn-primary">Buy</button>
             </div>
             <div class="card-footer">
               
@@ -298,6 +302,9 @@ alert(currentItemSize);
           <li class="nav-item">
             <a class="nav-link" href="team.html">Contact</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="checkout.html">Checkout</a>
+            </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
          
