@@ -167,6 +167,15 @@
       </style>
  
 <script>
+
+var red = true; 
+$("body").css("background-image", "url('s2kc.png')").fadeIn(5000);
+// setInterval(function(){
+  //  $("body").css("background-color",red? "rgb(247, 6, 6,.8)" :"white").fadeIn("slow");
+ 
+  // red = !red;
+// },5000); 
+
 function validateEmail(input){
       
       if (input.validity.typeMismatch || input.value=="") {
@@ -281,17 +290,15 @@ function validateEmail(input){
         <div class="jumbotron jumbotron-fluid" img src="9977kiao.png" alt="" >
             <h2 class="display-4 text-dark" id="jumbo1" >#1 Posters</h2>
             </div>
-  <div class="alert alert-danger row justify-content-center" role="alert">
-      Call 310-555-5555 for a 50% off  code!
-    </div>
+  
 
     <div class="card-group">
         <div class="card">
           <img src="vipersq.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">High Quality</h5>
+            <h5 class="card-title" id="mytarget">High Quality</h5>
             <p class="card-text">We are here to give you the nicest posters in the car poster game!</p>
-          </div>
+          </div> 
           <div class="card-footer">
             
           </div>

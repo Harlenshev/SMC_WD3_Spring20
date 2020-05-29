@@ -43,37 +43,40 @@
 
 </head>
 
-<script>
-if(!localStorage.getItem("cartSize")) {
-  localStorage.setItem("cartSize", 0);
-}
 
-
-function buyItem(itemNum, productName) {
-  /* 
-  1- S2000 $10.00
-  2- Viper $10.00
-  3- FRS $10.00
- 
- 
-  */
- $("#checkoutModal") .modal("show");
- var itemName = "product" + itemNum;
- if (localStorage.getItem(itemName)){
-//added   
-var currentItemSize = Number(localStorage.getItem("cartSize"));
-alert("This Item Has Been Already Added");
- } else
- {
-  localStorage.setItem(itemName, productName);
-  var currentItemSize = Number(localStorage.getItem("cartSize"));
-  currentItemSize++;
-  localStorage.setItem("cartSize", currentItemSize);
- }
-}
-  </script>
 
 <body>
+
+  <script>
+      if(!localStorage.getItem("cartSize")) {
+        localStorage.setItem("cartSize", 0);
+      }
+      
+      
+      function buyItem(itemNum, productName) {
+        /* 
+        1- S2000 $10.00
+        2- Viper $10.00
+        3- FRS $10.00
+       
+       
+        */
+       $("#checkoutModal") .modal("show");
+       var itemName = "product" + itemNum;
+       if (localStorage.getItem(itemName)){
+      //added   
+      var currentItemSize = Number(localStorage.getItem("cartSize"));
+      alert("This Item Has Been Already Added");
+       } else
+       {
+        localStorage.setItem(itemName, productName);
+        var currentItemSize = Number(localStorage.getItem("cartSize"));
+        currentItemSize++;
+        localStorage.setItem("cartSize", currentItemSize);
+       }
+      }
+    </script>
+
   <div class="jumbotron jumbotron-fluid" img src="assets/dogme4.jpg" alt="">
     
     <div class="container">
@@ -115,7 +118,10 @@ alert("This Item Has Been Already Added");
 
   <div class="card-group">
       <div class="card">
-        <img src="leash1.png" class="card-img-top" alt="...">
+        <a href="s2000.html" target="_self">
+            <img src="leash1.png" class="card-img-top" alt="...">
+        </a>
+        
         <div class="card-body">
           <h5 class="card-title">Walks</h5>
           <p class="card-text">We can come to your house and take your Tarantula for walks. Leashes can be provided. The walks consits strength tranning and relaxing jogging.</p>
@@ -126,7 +132,10 @@ alert("This Item Has Been Already Added");
         </div>
       </div>
       <div class="card">
-        <img src="tarantulahand.png" class="card-img-top" alt="...">
+          <a href="viper.html" target="_self">
+              <img src="tarantulahand.png" class="card-img-top" alt="...">
+          </a>
+        
         <div class="card-body">
           <h5 class="card-title">Runaway Patrol</h5>
           <p class="card-text">If your Tarantula escapes we can help! We have rescued one that escaped in a college classroom. Call us so we can help!</p>
@@ -137,96 +146,19 @@ alert("This Item Has Been Already Added");
         </div>
       </div>
       <div class="card">
-        <img src="caget.png" class="card-img-top" alt="...">
+          <a href="frs.html" target="_self">
+              <img src="caget.png" class="card-img-top" alt="...">
+          </a>
+        
         <div class="card-body">
           <h5 class="card-title">Tarantula Sitting</h5>
           <p class="card-text">We can watch your Tarantula while your on vacation. Our Facility has comfortable cages and climate controled areas.</p>
           <button type="button" onclick="buyItem(3, 'FRS')" class="btn btn-primary">Buy</button>
         </div>
         <div class="card-footer">
-          
-        </div>
+          </div>
       </div>
-    
-
-      <div class="card-group">
-          <div class="card">
-            <img src="leash1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Walks</h5>
-              <p class="card-text">We can come to your house and take your Tarantula for walks. Leashes can be provided. The walks consits strength tranning and relaxing jogging.</p>
-              <button type="button" onclick="buyItem(4, 'Lexus IS')" class="btn btn-primary">Buy</button>
-            </div>
-            <div class="card-footer">
-              
-            </div>
-          </div>
-          <div class="card">
-            <img src="tarantulahand.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Runaway Patrol</h5>
-              <p class="card-text">If your Tarantula escapes we can help! We have rescued one that escaped in a college classroom. Call us so we can help!</p>
-              <button type="button" onclick="buyItem(5)" class="btn btn-primary">Buy</button>
-            </div>
-            <div class="card-footer">
-              
-            </div>
-          </div>
-          <div class="card">
-            <img src="caget.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tarantula Sitting</h5>
-              <p class="card-text">We can watch your Tarantula while your on vacation. Our Facility has comfortable cages and climate controled areas.</p>
-              <button type="button" onclick="buyItem(6)" class="btn btn-primary">Buy</button>
-            </div>
-            <div class="card-footer">
-              
-            </div>
-          </div>
-
-
-
-
-          <div class="card-group">
-              <div class="card">
-                <img src="leash1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Walks</h5>
-                  <p class="card-text">We can come to your house and take your Tarantula for walks. Leashes can be provided. The walks consits strength tranning and relaxing jogging.</p>
-                  <button type="button" onclick="buyItem(7)" class="btn btn-primary">Buy</button>
-                </div>
-                <div class="card-footer">
-                  
-                </div>
-              </div>
-              <div class="card">
-                <img src="tarantulahand.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Runaway Patrol</h5>
-                  <p class="card-text">If your Tarantula escapes we can help! We have rescued one that escaped in a college classroom. Call us so we can help!</p>
-                  <button type="button" onclick="buyItem(8)" class="btn btn-primary">Buy</button>
-                </div>
-                <div class="card-footer">
-                  
-                </div>
-              </div>
-              <div class="card">
-                <img src="caget.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Tarantula Sitting</h5>
-                  <p class="card-text">We can watch your Tarantula while your on vacation. Our Facility has comfortable cages and climate controled areas.</p>
-                  <button type="button" onclick="buyItem(9)" class="btn btn-primary">Buy</button>
-                </div>
-                <div class="card-footer">
-                  
-                </div>
-              </div>
-
-
-
-
-
-    </div>
+     </div>
     
   
   
@@ -258,6 +190,7 @@ alert("This Item Has Been Already Added");
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </head>
 <body>

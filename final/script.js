@@ -30,7 +30,33 @@ $(document).ready(function(){
 
   
     
-    
+    if(!localStorage.getItem("cartSize")) {
+        localStorage.setItem("cartSize", 0);
+      }
+      
+      
+      function buyItem(itemNum, productName) {
+        /* 
+        1- S2000 $10.00
+        2- Viper $10.00
+        3- FRS $10.00
+       
+       
+        */
+       $("#checkoutModal") .modal("show");
+       var itemName = "product" + itemNum;
+       if (localStorage.getItem(itemName)){
+      //added   
+      var currentItemSize = Number(localStorage.getItem("cartSize"));
+      alert("This Item Has Been Already Added");
+       } else
+       {
+        localStorage.setItem(itemName, productName);
+        var currentItemSize = Number(localStorage.getItem("cartSize"));
+        currentItemSize++;
+        localStorage.setItem("cartSize", currentItemSize);
+       }
+      }
     
 
 });
