@@ -1,6 +1,9 @@
 $(document).ready(function(){
     //we write everything here
-    $("#myModal").modal('show');
+    
+    setTimeout(function(){
+        $("#myModal").modal('show');
+    },3000); 
     $('#myCarousel').carousel({
         interval: 2000
     });

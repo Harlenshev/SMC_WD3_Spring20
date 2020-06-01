@@ -75,6 +75,36 @@
         localStorage.setItem("cartSize", currentItemSize);
        }
       }
+      
+
+     
+
+var currentOpacity = 0; 
+var adding = true; 
+var changeBackground = function() {
+    setInterval(function(){
+        if (adding){
+        	currentOpacity = currentOpacity + .05; 
+          	$("button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
+            if (currentOpacity > 1) {
+              adding = false; 
+          	}
+        
+        }else{
+          currentOpacity = currentOpacity - .05; 
+          $(".button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
+          if (currentOpacity < 0) {
+              adding = true; 
+          }
+        }
+        
+    }, 100); 
+}
+changeBackground(); 
+
+
+
+
     </script>
 
   <div class="jumbotron jumbotron-fluid" img src="assets/dogme4.jpg" alt="">

@@ -29,7 +29,7 @@
 
 <hr class="featurette-divider">
 
-  <title>The Team</title>
+  <title>Contact</title>
   <style>
     .jumbotron {
       background-size: cover;
@@ -39,6 +39,23 @@
   
       
     }
+    .slide-right {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 300px;
+  max-width: 500px
+}
+
+.slide-right #myTopHeader {
+  animation: 2s slide-right 2s forwards;
+    transform:translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform:translateX(0);
+  }
+}
   </style>
 
 </head>
@@ -47,8 +64,9 @@
   <div class="jumbotron jumbotron-fluid" img src="tar22.png" alt="">
     
     <div class="container">
-      <h1 class="display-4 text-dark">The Team</h1>
-      
+     <div class="slide-right">
+      <h1  id = myTopHeader  class="display-4 text-dark">Contact</h1>
+    </div>
       
     
      
@@ -56,86 +74,7 @@
   </div>
 
  
-  <div class="card-group">
-      <div class="card">
-        <img src="max1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Max</h5>
-          <p class="card-text">The founder of this wonderful company. Started in 1999, he has worked with hundreds of  Tarantulas.</p>
-        </div>
-        <div class="card-footer">
-          
-        </div>
-      </div>
-      <div class="card">
-        <img src="billy1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Billy</h5>
-          <p class="card-text">Billy has been with us since 2003. He went to college for Tarantulaology. He is an Expert at walking Tarantulas.
-          </p>
-        </div>
-        <div class="card-footer">
-          
-        </div>
-      </div>
-      <div class="card">
-        <img src="stacy1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Stacy</h5>
-          <p class="card-text">She has been with us since 2007. Stacy knows how to calm down Tarantulas. She used to work with Tigers.</p>
-        </div>
-        <div class="card-footer">
-          
-        </div>
-      </div>
-      <div class="card">
-          <img src="johnny1.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Johnny</h5>
-            <p class="card-text">The Tarantula wrangler! He even helped track one down at a college campus. Yes that's a tattoo.</p>
-          </div>
-          <div class="card-footer">
-           
-          </div>
-        </div>
-    </div>
-    
-    <table class="table table-hover table-dark table-striped" id="custom-table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handled</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Max</td>
-            <td>Brooks</td>
-            <td>431</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Billy</td>
-            <td>Smith</td>
-            <td>182</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Stacy</td>
-            <td>Flair</td>
-            <td>134</td>
-          </tr>
-          <tr>
-              <th scope="row">4</th>
-              <td>Johnny</td>
-              <td>Scott</td>
-              <td>103</td>
-            </tr>
-        </tbody>
-      </table>
+ 
   
   
   
@@ -152,7 +91,7 @@
     
 
     <!-- /END THE FEATURETTES -->
-  </div>
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
