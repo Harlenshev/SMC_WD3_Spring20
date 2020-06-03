@@ -24,6 +24,56 @@
    border-width: thin;
     border-color: rgb(247, 6, 6);
         }
+
+           /* WebKit and Opera browsers */
+    @-webkit-keyframes spinner {
+      from { -webkit-transform: rotateY(0deg);    }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+  
+    /* all other browsers */
+    @keyframes spinner {
+      from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
+      to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+      }
+    }
+
+    #stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+  #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
         </style>
 
 
@@ -31,7 +81,21 @@
 
   <title>Contact</title>
   <style>
+    @media only screen and (max-width: 609px) {
+ 
+ .container{
+ width: 90%;
+}
+ 
+}
+/* form{
+display: block;
+  margin-left: 20%;
+  margin-right: auto;
+  width: 80%;
+} */
     .jumbotron {
+
       background-size: cover;
       background-position: center;
       background-image: url("997po.png");
@@ -59,7 +123,9 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+ </script>
+
+
     <div class="container">
   <div class="jumbotron jumbotron-fluid" img src="assets/dogme4.jpg" alt="">
     
@@ -115,15 +181,62 @@
       </picture>
     
     <hr class="featurette-divider">
-    
+    <div id="stage" style="background: rgba(116, 116, 116, 0.5);">
+      <p id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: rgb(250, 4, 4);">CHAT WITH US!</p>
+      </div>
     <div class="blog-header">
-       
+      <hr class="featurette-divider">
           <h4 class="blog-title">Carposters@mail.com</h4>
 
           <hr class="featurette-divider">
           <h4 class="blog-title">310-555-2555</h4>
           <hr class="featurette-divider">
           <h4 class="blog-title">@Carposters</h4>
+          <hr class="featurette-divider">
+         <!--Section: Contact v.2-->
+
+
+         <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6">
+                    <!-- Form -->
+                    <form class="form-example" action="" onsubmit=" return submitFunction(event)" method="post">
+                        <h1>Message Us</h1>
+                        
+                        <!-- Input fields -->
+                        <div class="form-group">
+                            <label for="username">Your Name:</label>
+                            <input type="text" class="form-control username" id="username" placeholder="Name..." name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="E-mail">Your E-mail</label>
+                            <input type="email" class="form-control username" id="email" placeholder="E-mail..." name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message</label> 
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-customized">Submit</button>
+                        <!-- End input fields -->
+                        
+                    </form>
+                    <!-- Form end -->
+                </div>
+            </div>
+        </div>
+    
+
+
+
+<!--Section: Contact v.2-->
+</form>
+          <hr class="featurette-divider">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6702.6792243606205!2d-117.1841455546056!3d32.86273277341065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc00a41c0eaaab%3A0x4c5dadb3a2328896!2s5400%20Governor%20Dr%2C%20San%20Diego%2C%20CA%2092111!5e0!3m2!1sen!2sus!4v1591205942669!5m2!1sen!2sus" 
+          width="90%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          
+          
 
         </div> 
         </div>
@@ -144,13 +257,18 @@
                        </div>
                        
     </div>
-    
-    
+  
     <script>
       $("#myModal").modal('show');
        setTimeout(function(){
         $("#myModal").modal('hide');
     },1000); 
+
+    function submitFunction(e){
+     e.preventDefault();
+     alert('Thankyou! :)');
+     return false;
+    }
     </script>
   </body>
 </html>
