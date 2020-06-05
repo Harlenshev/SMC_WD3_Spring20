@@ -162,12 +162,38 @@
         
   <body>
     
+<script>
+var currentOpacity = 0; 
+var adding = true; 
+var changeBackground = function() {
+    setInterval(function(){
+        if (adding){
+        	currentOpacity = currentOpacity + .05; 
+          	$("body").css("background-color", `rgb( 245, 215, 215,${currentOpacity})`);
+            if (currentOpacity > .5) {
+              adding = false; 
+          	}
+        
+        }else{
+          currentOpacity = currentOpacity - .05; 
+          $("body").css("background-color", `rgb( 245, 215, 215,${currentOpacity})`);
+          if (currentOpacity < 0) {
+              adding = true; 
+          }
+        }
+        
+    }, 100); 
+}
+changeBackground(); 
+</script>
+
+
     <div class="container"> 
       
 
       <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top " id="navbarcustom">
-        <a class="navbar-brand" href="#">Car Posters</a>
+        <a class="navbar-brand" href="#" id="postersHeader">Car Posters</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
