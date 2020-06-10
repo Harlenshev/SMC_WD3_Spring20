@@ -20,11 +20,14 @@
     background-color: rgb(245, 245, 245);
   }
 
-        .card {
+  .money{
+    color: green;
+  }
+       /* .card {
           border-style: solid;
    border-width: thin;
     border-color: rgb(247, 6, 6);
-        }
+        }*/
         </style>
 
 <hr class="featurette-divider">
@@ -46,6 +49,19 @@
 
 
 <body>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+
+<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 
   <script>
       if(!localStorage.getItem("cartSize")) {
@@ -63,20 +79,21 @@
         */
        $("#checkoutModal") .modal("show");
        var itemName = "product" + itemNum;
-       if (localStorage.getItem(itemName)){
+       /*if (localStorage.getItem(itemName)){
       //added   
       var currentItemSize = Number(localStorage.getItem("cartSize"));
       alert("This Item Has Been Already Added");
        } else
-       {
+       {*/
         localStorage.setItem(itemName, productName);
         var currentItemSize = Number(localStorage.getItem("cartSize"));
-        currentItemSize++;
-        localStorage.setItem("cartSize", currentItemSize);
-       }
+        //currentItemSize++;
+        //localStorage.setItem("cartSize", currentItemSize);
+       
       }
-      
-
+      buyItem(1, 'S2000');
+      buyItem(2, 'Viper');
+      buyItem(3, 'FRS');
      
 
 var currentOpacity = 0; 
@@ -85,14 +102,14 @@ var changeBackground = function() {
     setInterval(function(){
         if (adding){
         	currentOpacity = currentOpacity + .05; 
-          	$("button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
+          	$(".card-body button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
             if (currentOpacity > 1) {
               adding = false; 
           	}
         
         }else{
           currentOpacity = currentOpacity - .05; 
-          $(".button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
+          $(".card-body button").css("background-color", `rgb( 247, 6, 6,${currentOpacity})`);
           if (currentOpacity < 0) {
               adding = true; 
           }
@@ -153,8 +170,8 @@ changeBackground();
         </a>
         
         <div class="card-body">
-          <h5 class="card-title">Honda S2000</h5>
-          <p class="card-text">Click the image for more! $10</p>
+          <h5 class="card-title">Honda S2000 <span class="money">$10</span></h5>
+          <p class="card-text">Click the image for more!</p>
           <button type="button" onclick="buyItem(1, 'S2000')" class="btn btn-primary">Buy</button>
         </div>
         <div class="card-footer">
@@ -167,8 +184,8 @@ changeBackground();
           </a>
         
         <div class="card-body">
-          <h5 class="card-title">Dodge Viper ACR</h5>
-          <p class="card-text">Click the image for more! $10</p>
+          <h5 class="card-title">Dodge Viper ACR <span class="money">$10</span></h5>
+          <p class="card-text">Click the image for more!</p>
           <button type="button" onclick="buyItem(2, 'Viper')" class="btn btn-primary">Buy</button>
         </div>
         <div class="card-footer">
@@ -181,8 +198,8 @@ changeBackground();
           </a>
         
         <div class="card-body">
-          <h5 class="card-title">Scion FRS</h5>
-          <p class="card-text">Click the image for more! $10</p>
+          <h5 class="card-title">Scion FRS <span class="money">$10</span></h5>
+          <p class="card-text">Click the image for more!</p>
           <button type="button" onclick="buyItem(3, 'FRS')" class="btn btn-primary">Buy</button>
         </div>
         <div class="card-footer">
@@ -209,17 +226,7 @@ changeBackground();
     <!-- /END THE FEATURETTES -->
   </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+  
     <script type="text/javascript" src="script.js"></script>
 </body>
 </head>
