@@ -7,6 +7,7 @@
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   font-family: allFont;
 
+  line-height: 180%;
 }
 
 @font-face{
@@ -19,6 +20,10 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+}
+
+.money{
+  color: green;
 }
 
 /*.card:hover {

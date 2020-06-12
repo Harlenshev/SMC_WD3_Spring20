@@ -29,7 +29,7 @@
  #myCarousel{
    border-style: solid;
    border-width: thin;
-    border-color: rgb(247, 6, 6);
+    border-color: rgba(247, 6, 6, 0);
   }
 
   #carouselControl {
@@ -83,17 +83,17 @@
             */
            $("#checkoutModal") .modal("show");
            var itemName = "product" + itemNum;
-           if (localStorage.getItem(itemName)){
-          //added   
-          var currentItemSize = Number(localStorage.getItem("cartSize"));
-          alert("This Item Has Been Already Added");
-           } else
-           {
-            localStorage.setItem(itemName, productName);
-            var currentItemSize = Number(localStorage.getItem("cartSize"));
-            currentItemSize++;
-            localStorage.setItem("cartSize", currentItemSize);
-           }
+          //  if (localStorage.getItem(itemName)){
+          // //added   
+          // var currentItemSize = Number(localStorage.getItem("cartSize"));
+          // alert("This Item Has Been Already Added");
+          //  } else
+          //  {
+          //   localStorage.setItem(itemName, productName);
+          //   var currentItemSize = Number(localStorage.getItem("cartSize"));
+          //   currentItemSize++;
+          //   localStorage.setItem("cartSize", currentItemSize);
+          //  }
           }
         </script>
     
@@ -169,14 +169,14 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="viper2.png" class="d-block w-100" alt="Second sunset">
+                <img src="viper1.png" class="d-block w-100" alt="Second sunset">
                 <div class="carousel-caption d-none d-md-block text-dark">
                  
                   <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="viper1.png" class="d-block w-100" alt="Third sunset">
+                <img src="viperbed.png" class="d-block w-100" alt="Third sunset">
                 <div class="carousel-caption d-none d-md-block text-dark">
                   
                   <p></p>
@@ -203,7 +203,7 @@
                 <button type="button" class="btn btn-danger"  id="carouselControl">Pause</button>
                 <br>
                 <br>
-                <p class="card-text">Oh wow! This poster came out nice! We took a Viper ACR out to Death Valley, California for a photoshoot! I (Jonny) went 165 mph on the freeway before ariving! We took some fresh photos of the beast! That red stripe is popping! $10
+                <p class="card-text">Oh wow! This poster came out nice! We took a Viper ACR out to Death Valley, California for a photoshoot! <span class="money">$10</span>
                                 
                   </p>
             

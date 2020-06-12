@@ -29,7 +29,7 @@
  #myCarousel{
    border-style: solid;
    border-width: thin;
-    border-color: rgb(247, 6, 6);
+    border-color: rgba(247, 6, 6, 0);
   }
 
   #carouselControl {
@@ -82,18 +82,18 @@
            
             */
            $("#checkoutModal") .modal("show");
-           var itemName = "product" + itemNum;
-           if (localStorage.getItem(itemName)){
-          //added   
-          var currentItemSize = Number(localStorage.getItem("cartSize"));
-          alert("This Item Has Been Already Added");
-           } else
-           {
-            localStorage.setItem(itemName, productName);
-            var currentItemSize = Number(localStorage.getItem("cartSize"));
-            currentItemSize++;
-            localStorage.setItem("cartSize", currentItemSize);
-           }
+          //  var itemName = "product" + itemNum;
+          //  if (localStorage.getItem(itemName)){
+          // //added   
+          // var currentItemSize = Number(localStorage.getItem("cartSize"));
+          // alert("This Item Has Been Already Added");
+          //  } else
+          //  {
+          //   localStorage.setItem(itemName, productName);
+          //   var currentItemSize = Number(localStorage.getItem("cartSize"));
+          //   currentItemSize++;
+          //   localStorage.setItem("cartSize", currentItemSize);
+          //  }
           }
         </script>
     
@@ -163,21 +163,21 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="frskc.png" class="d-block w-100" alt="First sunset">
+                <img src="frskc2.png" class="d-block w-100" alt="First sunset">
                 <div class="carousel-caption d-none d-md-block text-dark">
                   
                   <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="frskc2.png" class="d-block w-100" alt="Second sunset">
+                <img src="frsbed.png" class="d-block w-100" alt="Second sunset">
                 <div class="carousel-caption d-none d-md-block text-dark">
                  
                   <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="frsdog.png" class="d-block w-100" alt="Third sunset">
+                <img src="frswall.png" class="d-block w-100" alt="Third sunset">
                 <div class="carousel-caption d-none d-md-block text-dark">
                   
                   <p></p>
@@ -204,8 +204,7 @@
                 <button type="button" class="btn btn-danger"  id="carouselControl">Pause</button>
                 <br>
                 <br>
-                <p class="card-text">This neon widebody FRS poster is up for sale! The founder Jonny has this Scion FRS! It is a stunning vehicle. This FRS has a Supercharger, Speed Factory unequal length headers, Rocket Bunny widebody kit straight from Japan, and super light HRE wheels. This Scion FRS build is super clean! 
-                    $10</p>
+                <p class="card-text">This neon widebody FRS poster is up for sale! <span class="money">$10</span></p>
             
                 <br>
                 <button type="button" onclick="buyItem(3, 'FRS')" class="btn btn-primary">Buy</button>
