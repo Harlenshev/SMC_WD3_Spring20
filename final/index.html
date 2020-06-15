@@ -68,13 +68,18 @@
           align-content: center;
           
         }
-        .modal-newsletter .modal-content {
+        .modal-newsletter{
           padding: 30px;
           border-radius: 0;		
           border: none;
           background-image: url("997po.png");
         }
-        .modal-newsletter .modal-header {
+
+        .modal-content {
+          background-image: url("997po.png");
+        }
+
+        .modal-newsletter {
           border-bottom: none;   
               position: relative;
               
@@ -104,6 +109,11 @@
         .modal-newsletter .close:hover {
           opacity: 0.8;
         }
+
+       /* .modal-title h4 {
+         transform: translate(20%,0);
+       } */
+
         .modal-newsletter .icon-box {
           color: #7265ea;		
           display: inline-block;
@@ -443,8 +453,8 @@ function validateEmail(input){
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Thank you for Subscribing</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="close" data-dismiss="modal">
+             &times;
           </button>
         </div>
         <div class="modal-body">
@@ -462,39 +472,63 @@ function validateEmail(input){
   
   <br>
   <br>
+ <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title center">Subscribe to our newsletter.</h4>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p class="center">Signup for the latest poster news.</p>
+          <input type="email" class="form-control" placeholder="Email" name="email" required="true" onkeyup="validateEmail(this)" onmouseout="validateEmail(this)">
+          <br> <div class="center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>  
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>  
+          </div>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer"></div>
+       
+        </div>
+        
+      </div>
+    </div>
+  </div>
 <!-- Modal -->
-      <div id="myModal" class="modal fade">
+      <!-- <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-newsletter">
           <div class="modal-content text-center">
-            <form action="/examples/actions/confirmation.php" method="post" class="was-validated">
-              
+           
               <div class="modal-header">
-                <div class="text-dark text-center">
+                <div class="modal-title"></div>
                       <h5>Subscribe to our newsletter</h5>	
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div> 
+                    <div class="modal-body text-dark">					
+                      <p>Signup for the latest poster news, updates and amazing offers delivered directly in your inbox.</p>
+                      <div class="input-group">
+                          <div class="row justify-content-center">
+                        <input type="email" class="form-control" placeholder="Email" name="email" required="true" onkeyup="validateEmail(this)" onmouseout="validateEmail(this)">
+                        
+                       <input type="submit"  id="submitButton" style="display: flex; justify-content: center" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" Close value="Subscribe" disabled> 
                     
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span style="padding: 5px">&times;</span></button>
+                        </div>
+                    </div>
                   </div> 
               
-
               
-              <div class="modal-body text-dark">					
-                <p>Signup for the latest poster news, updates and amazing offers delivered directly in your inbox.</p>
-                <div class="input-group">
-                    <div class="row justify-content-center">
-                  <input type="email" class="form-control" placeholder="Email" name="email" required="true" onkeyup="validateEmail(this)" onmouseout="validateEmail(this)">
-                  <div class="valid-feedback"></div>
-                <div class="invalid-feedback"></div>
-                 <input type="submit"  id="submitButton" style="display: flex; justify-content: center" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" Close value="Subscribe" disabled> 
-              
-                
-                
-                  </div>
-              </div>
-            </form>			
+            		
           </div>
         </div>
-      </div>
+      </div> -->
       <script type="text/javascript" src="script.js"></script>
     </div> <!-- Ending container tag-->
     <p class="center">Like Us On FaceBook!</p>
